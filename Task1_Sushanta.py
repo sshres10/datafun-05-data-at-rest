@@ -128,3 +128,17 @@ with open('accounts.csv', 'r', newline='') as accounts:
         # Print the record
         print(f'{account:<10}{name:<10}{balance:>10}')
 
+# Import the pandas module
+import pandas as pd
+
+# Read the CSV file from the URL and store it in a DataFrame
+titanic = pd.read_csv('TitanicSurvival.csv')
+
+# Set the precision for floating-point values
+pd.set_option('precision', 2)
+
+# Display the first five rows of the DataFrame
+print(titanic.head())
+
+# Display the last five rows of the DataFrame
+print(titanic.tail())
